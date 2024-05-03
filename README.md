@@ -3,7 +3,9 @@ Devices Price Classification System assessment for **Maids.cc**. System has **97
 Here's a demo of the project:
 
 ![Demo](assets/MobPriceClsProjDemo.webm)
-Video: assets/MobPriceClsProjDemo.webm
+
+Video: assets/MobPriceClsProjDemo.webm,
+or see it on YouTube from [here](https://youtu.be/ttuizuLlvxw).
 
 ## How to run
 1. Run `ML/Model-API.py` module to setup the prediction endpoint which is necessary for `/api/predict` back-end endpoint.
