@@ -4,7 +4,7 @@ from Transformers import *
 
 PIPELINE_FILE_NAME = 'Pipeline.pkl'
 MODEL_FILE_NAME = 'Model.pkl'
-PRICE_RANGES = ("low", "medium", "high", "very high")
+# PRICE_RANGES = ("low", "medium", "high", "very high")
 
 def load_work(pipeline_fn=PIPELINE_FILE_NAME, model_fn=MODEL_FILE_NAME):
     def load(filename):
@@ -25,15 +25,18 @@ def prepare(data):
     return prepared
 
 App = Flask(__name__)
-@App.route("/predict_price_range", methods=['GET'])
+@App.route("/predict_price_range", methods=['POST'])
 def get_price_range():
     payload = request.get_json()
+    print(payload)
     prepared_data = prepare(payload)
     prediction = model.predict(prepared_data)
     prediction = prediction.tolist()[0]
     response = jsonify({
-        'price_range': [prediction, f'({PRICE_RANGES[prediction]} cost)']
+#        'price_range': [prediction, f'({PRICE_RANGES[prediction]} cost)']
+        'price_range': prediction
     })
+    print(response)
     return response
 
 if __name__ == '__main__':

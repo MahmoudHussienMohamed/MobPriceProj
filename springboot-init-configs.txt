@@ -1,0 +1,1 @@
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.2.5&packaging=jar&jvmVersion=17&groupId=com.MobPriceCls&artifactId=EndPoints&name=EndPoints&description=Back-End%20API%20for%20MobPriceCls%20project&packageName=com.MobPriceCls.EndPoints&dependencies=webflux,data-mongodb-reactive,data-mongodb,lombok
