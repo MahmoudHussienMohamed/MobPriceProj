@@ -39,13 +39,4 @@ public class DeviceController {
                 });
     }
 
-    @PutMapping("/update/{id}")
-    public Mono<DeviceDTO> updateDevice(@RequestBody Mono<DeviceDTO> DeviceDTOMono, @PathVariable String id){
-        return service.updateDevice(DeviceDTOMono, id);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public Mono<Void> deleteDevice(@PathVariable String id){
-        return service.deleteDevice(id);
-    }
 }

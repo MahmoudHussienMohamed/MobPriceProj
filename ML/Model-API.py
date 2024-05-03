@@ -4,7 +4,6 @@ from Transformers import *
 
 PIPELINE_FILE_NAME = 'Pipeline.pkl'
 MODEL_FILE_NAME = 'Model.pkl'
-# PRICE_RANGES = ("low", "medium", "high", "very high")
 
 def load_work(pipeline_fn=PIPELINE_FILE_NAME, model_fn=MODEL_FILE_NAME):
     def load(filename):
@@ -33,7 +32,6 @@ def get_price_range():
     prediction = model.predict(prepared_data)
     prediction = prediction.tolist()[0]
     response = jsonify({
-#        'price_range': [prediction, f'({PRICE_RANGES[prediction]} cost)']
         'price_range': prediction
     })
     print(response)

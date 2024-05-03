@@ -1,32 +1,42 @@
 # MobPriceProj
 Devices Price Classification System assessment for **Maids.cc**. System has **97.35% accuracy score** utilizing the power of **SupportVectorClassifier (*SVC*)** and non-blocking server with the use of **SpringBoot WebFlux** utilities.
+Here's a demo of the project:
+
+![Demo](assets/MobPriceClsProjDemo.webm)
+Video: assets/MobPriceClsProjDemo.webm
+
+## How to run
+1. Run `ML/Model-API.py` module to setup the prediction endpoint which is necessary for `/api/predict` back-end endpoint.
+2. Run the back-end (`BE/EndPoints/src/main/java/com/MobPriceCls/EndPoints/EndPointsApplication.java`) to setup all back-end endpoints.
+3. Run `API.py` to request the back-end.
 ## Project Structure
 ``` bash
 ├── API.py
 ├── BE
-│   └── EndPoints
-│       └── src
-│           └── main
-│               ├── java
-│               │   └── com
-│               │       └── MobPriceCls
-│               │           └── EndPoints
-│               │               ├── Controller
-│               │               │   └── DeviceController.java
-│               │               ├── DTO
-│               │               │   └── DeviceDTO.java
-│               │               ├── EndPointsApplication.java
-│               │               ├── Entity
-│               │               │   └── Device.java
-│               │               ├── Repository
-│               │               │   └── DeviceRepository.java
-│               │               ├── Service
-│               │               │   └── DeviceService.java
-│               │               └── Utils
-│               │                   └── AppUtils.java
-│               └── resources
-│                   ├── application.properties
-│                   └── application.yml
+│   ├── EndPoints
+│   │   └── src
+│   │       └── main
+│   │           ├── java
+│   │           │   └── com
+│   │           │       └── MobPriceCls
+│   │           │           └── EndPoints
+│   │           │               ├── Controller
+│   │           │               │   └── DeviceController.java
+│   │           │               ├── DTO
+│   │           │               │   └── DeviceDTO.java
+│   │           │               ├── EndPointsApplication.java
+│   │           │               ├── Entity
+│   │           │               │   └── Device.java
+│   │           │               ├── Repository
+│   │           │               │   └── DeviceRepository.java
+│   │           │               ├── Service
+│   │           │               │   └── DeviceService.java
+│   │           │               └── Utils
+│   │           │                   └── AppUtils.java
+│   │           └── resources
+│   │               ├── application.properties
+│   │               └── application.yml
+│   └── EndPoints.zip
 ├── ML
 │   ├── Model-API.py
 │   ├── Model.ipynb
@@ -54,3 +64,4 @@ Devices Price Classification System assessment for **Maids.cc**. System has **97
 ### Remaining important files
 * `API.py`: Python module acts as client side and call requests and endpoints of back-end.
 * `springboot-init-configs.txt`: contains link of **SpringBoot Initializer** with configured values.
+* `EndPoints.zip`: Raw generated project from **SpringBoot Initializer**. (*can be downloaded from the link inside `springboot-init-configs.txt` file*) 
