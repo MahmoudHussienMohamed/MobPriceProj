@@ -1,5 +1,5 @@
 # MobPriceProj
-Devices Price Classification System assessment for **Maids.cc**. System has **97.35% accuracy score** utilizing the power of **SupportVectorClassifier (*SVC*)** and non-blocking server with the use of **SpringBoot WebFlux** utilities.
+Devices Price Classification System with SpringBoot REST-API. System has **97.35% accuracy score** utilizing the power of **SupportVectorClassifier (*SVC*)** and non-blocking server with the use of **SpringBoot WebFlux** utilities.
 Here's a demo of the project:
 
 ![Demo](assets/MobPriceClsProjDemo.webm)
